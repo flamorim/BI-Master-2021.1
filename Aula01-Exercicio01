@@ -1,0 +1,94 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPQ2qUalDAZHTIqSVPHfm3l",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/flamorim/BI-Master-2021.1/blob/Features(versao-1)/Aula01-Exercicio01\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qnC1BQdc1Y4c",
+        "outputId": "b352ea4e-ba1f-4db0-9e34-e7b59755042f"
+      },
+      "source": [
+        "resultado = False\r\n",
+        "\r\n",
+        "def soma(a,b):\r\n",
+        "   return a + b\r\n",
+        "\r\n",
+        "def subtrai(a,b):\r\n",
+        "   return a - b\r\n",
+        "\r\n",
+        "def divide(a,b):\r\n",
+        "   return a / b\r\n",
+        "\r\n",
+        "def multiplica(a,b):\r\n",
+        "   return a * b\r\n",
+        "\r\n",
+        "num_1 = float(input(\"Favor entrar com o primeiro número: \"))\r\n",
+        "num_2 = float(input(\"favor entrar com o segundo número: \"))\r\n",
+        "ope = input(\"Favor informar a operação desejada: \")\r\n",
+        "\r\n",
+        "if ope == \"soma\":\r\n",
+        "  resultado = soma(num_1,num_2)\r\n",
+        "elif ope == \"divisão\":\r\n",
+        "  resultado = divide(num_1,num_2)\r\n",
+        "elif ope == \"multiplicação\":\r\n",
+        "  resultado = multiplica(num_1,num_2)\r\n",
+        "elif ope == (\"subtração\"):\r\n",
+        "  resultado = subtrai(num_1,num_2)\r\n",
+        "\r\n",
+        "if resultado:\r\n",
+        "  print(resultado)\r\n",
+        "  \r\n",
+        "  if (resultado // 1) == resultado:\r\n",
+        "    print(\"inteiro\")\r\n",
+        "    if (resultado % 2):\r\n",
+        "      print(\"impar\")\r\n",
+        "    else:\r\n",
+        "      print(\"par\")\r\n",
+        "  else:\r\n",
+        "    print(\"decimal\")\r\n",
+        "else:\r\n",
+        "  print(\"operação inválida\")\r\n"
+      ],
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Favor entrar com o primeiro número2.2\n",
+            "favor entrar com o segundo número2\n",
+            "Favor informar a operação desejadasoma\n",
+            "4.2\n",
+            "decimal\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
