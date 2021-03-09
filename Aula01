@@ -1,0 +1,193 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyPiUrgVqumOMJxg94zAKZ3t",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/flamorim/BI-Master-2021.1/blob/Features(versao-1)/Aula01\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qnC1BQdc1Y4c",
+        "outputId": "07c24a22-e2ee-468d-be40-9f467bc1ec2a"
+      },
+      "source": [
+        "# exercicio 01\r\n",
+        "\r\n",
+        "#variaveis\r\n",
+        "resultado = False\r\n",
+        "\r\n",
+        "#funcoes\r\n",
+        "def soma(a,b):\r\n",
+        "   return a + b\r\n",
+        "\r\n",
+        "def subtrai(a,b):\r\n",
+        "   return a - b\r\n",
+        "\r\n",
+        "def divide(a,b):\r\n",
+        "   return a / b\r\n",
+        "\r\n",
+        "def multiplica(a,b):\r\n",
+        "   return a * b\r\n",
+        "\r\n",
+        "#Codigo principal2\r\n",
+        "num_1 = float(input(\"Favor entrar com o primeiro número: \"))\r\n",
+        "num_2 = float(input(\"favor entrar com o segundo número: \"))\r\n",
+        "ope = input(\"Favor informar a operação desejada: \")\r\n",
+        "\r\n",
+        "if ope == \"soma\":\r\n",
+        "  resultado = soma(num_1,num_2)\r\n",
+        "elif ope == \"divisão\":\r\n",
+        "  resultado = divide(num_1,num_2)\r\n",
+        "elif ope == \"multiplicação\":\r\n",
+        "  resultado = multiplica(num_1,num_2)\r\n",
+        "elif ope == (\"subtração\"):\r\n",
+        "  resultado = subtrai(num_1,num_2)\r\n",
+        "\r\n",
+        "if resultado:\r\n",
+        "  print(f'O resultado é: {resultado}')\r\n",
+        "\r\n",
+        "  # par ou impar somente para numeros inteiros  \r\n",
+        "  if (resultado // 1) == resultado:\r\n",
+        "    print(\"É um número inteiro\")\r\n",
+        "    if (resultado % 2):\r\n",
+        "      print(\"É um número impar\")\r\n",
+        "    else:\r\n",
+        "      print(\"É um número par\")\r\n",
+        "  else:\r\n",
+        "    print(\"É um número decimal\")\r\n",
+        "  if ( resultado < 0):\r\n",
+        "    print(\"É um número negativo\")\r\n",
+        "  else:\r\n",
+        "    print(\"É um número positivo\")\r\n",
+        "else:\r\n",
+        "  print(\"operação inválida\")\r\n"
+      ],
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Favor entrar com o primeiro número: 2\n",
+            "favor entrar com o segundo número: 2\n",
+            "Favor informar a operação desejada: soma\n",
+            "O resultado é: 4.0\n",
+            "É um número inteiro\n",
+            "É um número par\n",
+            "É um número positivo\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 312
+        },
+        "id": "3kWNQDMTD8Mg",
+        "outputId": "88d24533-00d0-4264-d488-becd4e6797a4"
+      },
+      "source": [
+        "#Exercicio 02\r\n",
+        "\r\n",
+        "#variaveis\r\n",
+        "resultado = 0\r\n",
+        "\r\n",
+        "#funcoes\r\n",
+        "def classifica(num):\r\n",
+        "  if num < 2:\r\n",
+        "    return(\"Inocente\")\r\n",
+        "  elif num < 3:\r\n",
+        "    return(\"Suspeita\")\r\n",
+        "  elif num < 5:\r\n",
+        "    return(\"cumplice\")\r\n",
+        "  elif num == 5:\r\n",
+        "    return(\"Assassino\")\r\n",
+        "  return(False)\r\n",
+        "\r\n",
+        "#programa principal\r\n",
+        "print(\"Favor responder com ´sim´ ou ´nao´\")\r\n",
+        "\r\n",
+        "resposta = False\r\n",
+        "resposta = input(\"Telefonou para a vítima?\")\r\n",
+        "if resposta == \"sim\":\r\n",
+        "  resultado = resultado + 1\r\n",
+        "\r\n",
+        "resposta = False\r\n",
+        "resposta = input(\"Esteve no local do crime?\")\r\n",
+        "if resposta == \"sim\":\r\n",
+        "  resultado = resultado + 1\r\n",
+        "\r\n",
+        "resposta = False\r\n",
+        "resposta = input(\"Mora perto da vítima?\")\r\n",
+        "if resposta == \"sim\":\r\n",
+        "  resultado = resultado + 1\r\n",
+        "\r\n",
+        "resposta = False\r\n",
+        "resposta = input(\"Devia para a vítima?\")\r\n",
+        "if resposta == \"sim\":\r\n",
+        " resultado = resultado + 1\r\n",
+        "\r\n",
+        "resposta = False\r\n",
+        "resposta = input(\"Já trabalhou com a vítima?\")\r\n",
+        "if resposta == \"sim\":\r\n",
+        " resultado = resultado + 1\r\n",
+        "\r\n",
+        "print(f'Então vc é {classifica(resultado)}!')\r\n"
+      ],
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Favor responder com ´sim´ ou ´nao´\n",
+            "Telefonou para a vítima?sim\n",
+            "Esteve no local do crime?sim\n",
+            "Mora perto da vítima?sim\n",
+            "Devia para a vítima?sim\n",
+            "Já trabalhou com a vítima?sim\n",
+            "Então vc é Assassino!\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-80-656cdcd6c72e>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     45\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     46\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf'Então vc é {classifica(resultado)}!'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 47\u001b[0;31m \u001b[0ms\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 's' is not defined"
+          ]
+        }
+      ]
+    }
+  ]
+}
