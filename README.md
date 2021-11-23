@@ -1,2 +1,3 @@
 # BI-Master-2021.1
-# Meu primeiro repositorio feito em 2021.02.23
+# I'll set my school assignemnts by subject here.
+I hope it can help those who are also studying.
